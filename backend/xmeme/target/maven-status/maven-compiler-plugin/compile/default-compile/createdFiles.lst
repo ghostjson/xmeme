@@ -1,0 +1,5 @@
+com/ghostjson/xmeme/models/Meme.class
+com/ghostjson/xmeme/configurations/SwaggerConfig.class
+com/ghostjson/xmeme/controllers/MemeController.class
+com/ghostjson/xmeme/repositories/MemeRepository.class
+com/ghostjson/xmeme/XmemeApplication.class

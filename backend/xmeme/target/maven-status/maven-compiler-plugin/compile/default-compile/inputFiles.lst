@@ -1,0 +1,5 @@
+/mnt/e/crio/xmeme/backend/xmeme/src/main/java/com/ghostjson/xmeme/models/Meme.java
+/mnt/e/crio/xmeme/backend/xmeme/src/main/java/com/ghostjson/xmeme/repositories/MemeRepository.java
+/mnt/e/crio/xmeme/backend/xmeme/src/main/java/com/ghostjson/xmeme/controllers/MemeController.java
+/mnt/e/crio/xmeme/backend/xmeme/src/main/java/com/ghostjson/xmeme/configurations/SwaggerConfig.java
+/mnt/e/crio/xmeme/backend/xmeme/src/main/java/com/ghostjson/xmeme/XmemeApplication.java

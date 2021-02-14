@@ -1,0 +1,56 @@
+<!-- Edit Meme HTML -->
+<div class="flex share-height">
+  <!-- Left Part -->
+  <div class="form flex flex-col p-20 justify-center md:w-1/2">
+    <div class="">
+      <form class="w-full h-96" (submit)="submit($event)">
+        <h2 class="font-open font-bold text-3xl">Share your meme with world</h2>
+        <p class="text-gray-600">Put smile on others</p>
+
+        <div class="flex flex-col m-6 ml-0">
+          <label class="font-medium">Meme Owner</label>
+          <input
+            disabled
+            type="text"
+            name="name"
+            [value]="post.name"
+            class="bg-gray-200"
+          />
+        </div>
+
+        <div class="flex flex-col m-6 ml-0">
+          <label class="font-medium">Caption</label>
+          <input type="text" name="caption" [(ngModel)]="post.caption" />
+        </div>
+
+        <div class="flex flex-col m-6 ml-0">
+          <label class="font-medium">Meme URL</label>
+          <input
+            (change)="urlInputChange()"
+            type="text"
+            name="url"
+            [(ngModel)]="post.url"
+          />
+          <p *ngIf="!is_valid_url" class="text-sm text-red-500 font-bold">
+            Given URL is not valid image.
+          </p>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="bg-black text-white px-7 py-1 font-semibold rounded-md"
+          >
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- End Left Part -->
+
+  <!-- Right Part -->
+  <div class="preview hidden md:block w-1/2 share-image"></div>
+  <!-- End Right Part -->
+</div>
+<!-- Edit Meme HTML -->

@@ -1,0 +1,10 @@
+<div class="flex min-h-screen bg-white">
+  <!-- App Sidebar -->
+  <app-sidebar class="flex-none fixed h-full hidden md:block"></app-sidebar>
+  <!-- Post Listing Section -->
+  <app-posts
+    *ngIf="contentMode"
+    [postsPromise]="memes"
+    class="flex-grow md:ml-52"
+  ></app-posts>
+</div>

@@ -1,0 +1,38 @@
+<div class="">
+  <form class="w-full h-96" (submit)="submit($event)">
+    <h2 class="font-open font-bold text-3xl">Share your meme with world</h2>
+    <p class="text-gray-600">Put smile on others</p>
+
+    <div class="flex flex-col m-6 ml-0">
+      <label class="font-medium">Meme Owner</label>
+      <input type="text" name="name" [(ngModel)]="post.name" />
+    </div>
+
+    <div class="flex flex-col m-6 ml-0">
+      <label class="font-medium">Caption</label>
+      <input type="text" name="caption" [(ngModel)]="post.caption" />
+    </div>
+
+    <div class="flex flex-col m-6 ml-0">
+      <label class="font-medium">Meme URL</label>
+      <input
+        (change)="urlInputChange()"
+        type="text"
+        name="url"
+        [(ngModel)]="post.url"
+      />
+      <p *ngIf="!is_valid_url" class="text-sm text-red-500 font-bold">
+        Given URL is not valid image.
+      </p>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        class="bg-black text-white px-7 py-1 font-semibold rounded-md"
+      >
+        Share
+      </button>
+    </div>
+  </form>
+</div>

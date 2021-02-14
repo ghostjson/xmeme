@@ -1,0 +1,18 @@
+<!-- Mobile View -->
+<div class="flex mt-4 ml-4 md:hidden">
+  <p class="font-bold pt-2 pr-3">Sort By</p>
+  <select (change)="changeFilter()" [(ngModel)]="filter">
+    <option value="latest">Latest Memes</option>
+    <option value="oldest">Oldest Memes</option>
+    <option value="likes">Most Liked</option>
+    <option value="least-liked">Least Liked</option>
+  </select>
+</div>
+<!-- End Mobile View -->
+<div class="bg-gray-100 h-full pb-10">
+  <app-post *ngFor="let post of posts" [post]="post"></app-post>
+  <p *ngIf="no_post" class="font-bold text-sm ml-2 pt-4">
+    No memes so far,
+    <a routerLink="/share" class="underline text-gray-600">Be first</a>
+  </p>
+</div>
