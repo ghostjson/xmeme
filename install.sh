@@ -9,15 +9,13 @@ sudo apt-get install -y python3-pip
 #install flask
 sudo pip3 install flask
 
-#ensuring add-apt-repository is installed
-sudo apt-get install software-properties-common
-
 #installing java
-sudo add-apt-repository -y ppa:linuxuprising/java
+sudo apt-get install -y software-properties-common
 
-sudo apt update
+wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+sudo apt-get install -y adoptopenjdk-15-hotspot
 
-sudo apt install -y oracle-java15-installer
 
 #install mysql
 
