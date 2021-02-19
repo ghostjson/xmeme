@@ -16,6 +16,11 @@ wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo 
 sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 sudo apt-get install -y adoptopenjdk-15-hotspot
 
+#install maven
+sudo apt-get install -y maven
+cd backend/xmeme
+mvn clean install
+cd ../../
 
 #install mysql
 
